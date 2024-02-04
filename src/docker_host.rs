@@ -28,3 +28,9 @@ impl DockerHost {
         format!("{:<16}{}", self.ip_address, self.hostname)
     }
 }
+
+impl std::fmt::Display for DockerHost {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        write!(f, "host: {}, ip: {}", self.hostname, self.ip_address)
+    }
+}
